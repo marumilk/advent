@@ -48,6 +48,8 @@ defmodule AdventOne do
     Integer.mod(current + distance, @dial_size)
   end
 
+  defp apply_rotation({:unknown, _distance}, current), do: current
+
   defp count_zeros(positions) do
     Enum.count(positions, &(&1 == 0))
   end
